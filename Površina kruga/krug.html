@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Porvšina kruga</title>
+	<meta charset="unicode">
+	<script type="text/javascript">
+		function calcValue (){
+			const Pi=3.14;
+		    var r=document.getElementById('VAL r').value;
+		    var d=r*2;
+		    var O=Pi*d;
+		    var P=Pi*(r*r);
+		    document.getElementById('Obim').value="Obim= " + O;
+		    document.getElementById('Površina').value="Površina= " + P;
+		}
+	</script>
+</head>
+<body>
+   <h1 style="text-align: center;font-size: 3vmax;"> Površina kvadra</h1>
+	<br>
+	<div id="Image" style="float: left;width: 50%">
+		<img src="circle.png" style="width: 70%;position:relative;left: 100px">
+	</div>
+	<p style="display: inline;">
+      <span style="font-size: 2vmax;"> O=2πr <br> P=πr²</span>
+	</p>
+	<br>
+	<br>
+     <frame title="Površina i obim kruga" >
+        <span style="font-size: 1.2vmax"> Enter values: </span>
+        <br>
+        <br>
+     	<input type="number" name="Val r" id="VAL r" placeholder="Input 'r' value"> <button onclick="document.getElementById('VAL r').value=''">Clear</button>
+     	
+     	<button onclick="calcValue()">Submit</button>
+     	<br>
+     	<br>
+     	<input type="text" id="Obim" name="OBIM"  style="height: 100px;text-align: center;" name="Result" value="O" >
+     	&nbsp;&nbsp;
+     	<input type="text"  id="Površina" style="height: 100px;text-align: center;" name="POVRŠINA" value="P">
+     </frame>
+</body>
+</html>
