@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kvadar kalkulator</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		function valueGetter(){
+			var a=document.getElementById('VAL_a').value;
+		     var b=document.getElementById('VAL_b').value;
+		      var c=document.getElementById('VAL_c').value;
+		var P=2*(a*b+a*c+b*c);
+		document.getElementById('Result').value=P;
+		}
+
+
+	</script>
+</head>
+<body>
+	<h1 style="text-align: center;font-size: 3vmax;"> Površina kvadra</h1>
+	<br>
+	<div id="Image" style="float: left;width: 50%">
+		<img src="kvadar.png" style="width: 70%;position:relative;left: 100px" alt="image p">
+	</div>
+	<p style="display: inline;">
+      <span style="font-size: 2vmax;"> P=2(ab+ac+bc)</span>
+	</p>
+	<br>
+	<br>
+     <frame>
+        <span style="font-size: 1.2vmax"> Enter values: </span>
+        <br>
+        <br>
+     	<input type="number" name="Val a" id="VAL_a" placeholder="Input 'a' value"> <button onclick="document.getElementById('VAL_a').value=''">Clear</button>
+     	<br>
+     	<input type="number" name="Val b" id="VAL_b" placeholder="Input 'b' value"> <button onclick="document.getElementById('VAL_b').value=''">Clear</button>
+     	<br>
+     	<input type="number" name="Val c" id="VAL_c" placeholder="Input 'c' value:"> <button onclick="document.getElementById('VAL_c').value=''">Clear</button>
+     	<br>
+     	<br>
+     	<button onclick="valueGetter()">Submit</button>
+     	<br>
+     	<br>
+     	<input type="text" id="Result"  style="height: 100px;text-align: center;" name="Result" value="Result" >
+     </frame>
+ </body>
+</html>
